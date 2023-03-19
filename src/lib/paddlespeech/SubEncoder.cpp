@@ -54,7 +54,7 @@ void SubEncoder::forward(Tensor<float> *din, Tensor<float> *pe)
 
     residual.reload(din);
     norm_mha->forward(din);
-    int offset = in_cache->buff_size;
+    // int offset = in_cache->buff_size;
     in_cache->concat(din, 2);
     self_attn->forward(din, in_cache, in_cache, pe);
     din->add(1, &residual);

@@ -254,7 +254,7 @@ void ModelImp::loadparams(const char *filename)
     fseek(fp, 0, SEEK_SET);
 
     params_addr = (float *)aligned_malloc(32, nFileLen);
-    int n = fread(params_addr, 1, nFileLen, fp);
+    (void)fread(params_addr, 1, nFileLen, fp);
 
     fclose(fp);
 }

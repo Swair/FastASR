@@ -52,7 +52,7 @@ void FeatureExtract::insert(float *din, int len, int flag)
         window = (const float *)&window_hamm_hex;
 
     int window_size = 400;
-    int fft_size = 512;
+    // int fft_size = 512;
     int window_shift = 160;
 
     speech.load(din, len);
@@ -138,7 +138,7 @@ void FeatureExtract::global_cmvn(float *din)
 void FeatureExtract::melspect(float *din, float *dout)
 {
     float fftmag[256];
-    float tmp;
+    // float tmp;
     const float *melcoe = (const float *)melcoe_hex;
     int i;
     for (i = 0; i < 256; i++) {

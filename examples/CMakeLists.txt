@@ -27,6 +27,8 @@ configure_file(k2_rnnt2_cli.py k2_rnnt2_cli.py COPYONLY)
 configure_file(paddlespeech_cli.py paddlespeech_cli.py COPYONLY)
 configure_file(paddlespeech_stream.py paddlespeech_stream.py COPYONLY)
 
+install(TARGETS paddlespeech_stream RUNTIME DESTINATION test)
+
 # target_include_directories(paddlespeech_cli PUBLIC
 # "${PROJECT_BINARY_DIR}"
 # ${EXTRA_INCLUDES}

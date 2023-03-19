@@ -8,7 +8,7 @@ endif()
 
 file(GLOB_RECURSE files "*.c" "rtc_base/checks.cc")
 
-message("${files}")
+# message("${files}")
 
 add_library(${PROJECT_NAME} OBJECT ${files})
 

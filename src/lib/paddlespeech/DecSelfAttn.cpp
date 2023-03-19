@@ -47,7 +47,7 @@ void DecSelfAttn::forward(Tensor<float> *&query, Tensor<float> *key,
             cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasTrans, q.size[1],
                         k.size[1], q.size[3], 1, q.buff + q_offset, 512,
                         k.buff + k_offset, 512, 1, attn.buff, n_key);
-            int ii, jj;
+            int ii;
             for (ii = 0; ii < attn.buff_size; ii++) {
                 attn.buff[ii] = attn.buff[ii] / 8;
             }

@@ -132,7 +132,7 @@ void Audio::loadwav(const char *filename)
     speech_align_len = (int)(ceil((float)speech_len / align_size) * align_size);
     speech_buff = (int16_t *)malloc(sizeof(int16_t) * speech_align_len);
     memset(speech_buff, 0, sizeof(int16_t) * speech_align_len);
-    int ret = fread(speech_buff, sizeof(int16_t), speech_len, fp);
+    (void)fread(speech_buff, sizeof(int16_t), speech_len, fp);
     fclose(fp);
 
     speech_data = (float *)malloc(sizeof(float) * speech_align_len);

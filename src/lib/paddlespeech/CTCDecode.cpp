@@ -73,7 +73,7 @@ void topk(float *din, int len, set<CharProb, decltype(char_cmp)> &s)
 void CTCdecode::ctc_beam_search(Tensor<float> *din)
 {
     int tmax = din->size[2];
-    int beam_size = 10;
+    // int beam_size = 10;
     int i;
 
     for (i = 0; i < tmax; i++) {

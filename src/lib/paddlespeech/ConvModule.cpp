@@ -39,7 +39,7 @@ ConvModule::~ConvModule()
 void ConvModule::reset()
 {
     Tensor<float> tmp(14, 1024);
-    int i, mm;
+    int i;
     for (i = 0; i < 14; i++) {
         int offset = i * 1024;
         memcpy(tmp.buff + offset, params->pointwise_conv1_bias,

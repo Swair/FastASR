@@ -32,7 +32,7 @@ Vocab::~Vocab()
 
 string Vocab::vector2string(vector<int> in)
 {
-    int i;
+    // int i;
     stringstream ss;
     for (auto it = in.begin(); it != in.end(); it++) {
         ss << vocab[*it];
@@ -70,7 +70,7 @@ bool Vocab::isChinese(string ch)
 
 string Vocab::vector2stringV2(vector<int> in)
 {
-    int i;
+    // int i;
     list<string> words;
 
     int is_pre_english = false;
