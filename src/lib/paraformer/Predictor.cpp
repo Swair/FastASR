@@ -91,7 +91,7 @@ void Predictor::disp_conv_im2col(int mm)
 void Predictor::forward(Tensor<float> *&din)
 {
     int mm = din->size[2];
-    int nn = din->size[3];
+    // int nn = din->size[3];
 
     Tensor<float> alphas(mm, 1);
     Tensor<float> hidden(din);

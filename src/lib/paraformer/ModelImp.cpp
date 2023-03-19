@@ -77,7 +77,7 @@ void ModelImp::apply_cmvn(Tensor<float> *din)
 {
     const float *var;
     const float *mean;
-    float scale = 22.6274169979695;
+    // float scale = 22.6274169979695;
     int m = din->size[2];
     int n = din->size[3];
 
